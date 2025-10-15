@@ -1,0 +1,12 @@
+{
+  "78691ef5-ff17-4c55-98ca-a57f0e9d50bd": {
+    "version": "0.1.0",
+    "schema": "https://raw.githubusercontent.com/zarr-experimental/missing_value/refs/tags/v0.1.0/schema.json",
+    "name": "missing_value",
+    "description": "Describes a value used to represent undefined/invalid/missing values in an array.",
+    "spec": "https://github.com/zarr-experimental/missing_value/blob/v0.1.0/README.md",
+    "configuration": {
+        "missing_value": 255
+    }
+  }
+}

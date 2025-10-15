@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Template Convention Metadata",
+  "description": "Schema for missing_value convention metadata",
+  "type": "object",
+  "properties": {
+    "78691ef5-ff17-4c55-98ca-a57f0e9d50bd": {
+      "type": "object",
+      "description": "missing_value metadata",
+      "properties": {
+        "version": {
+          "type": "string",
+          "const": "0.1.0",
+          "description": "Semantic version number of the convention"
+        },
+        "schema": {
+          "type": "string",
+          "const": "https://raw.githubusercontent.com/zarr-experimental/missing_value/refs/tags/v0.1.0/schema.json",
+          "description": "URL to the JSON Schema definition for this convention"
+        },
+        "name": {
+          "type": "string",
+          "const": "missing_value",
+          "description": "Human-readable name of the convention"
+        },
+        "description": {
+          "type": "string",
+          "const": "Describes a value used to represent undefined/invalid/missing values in an array.",
+          "description": "Brief description of the convention's purpose and usage"
+        },
+        "spec": {
+          "type": "string",
+          "const": "https://github.com/zarr-experimental/missing_value/blob/v0.1.0/README.md",
+          "description": "URL to the full specification document"
+        },
+        "configuration": {
+          "type": "object",
+          "description": "Convention-specific configuration parameters",
+          "properties": {
+            "missing_value": {
+              "type":["number", "string", "boolean", "object", "array"],
+              "description": "REQUIRED. Missing value sentinel. Its type must be the same as the Array.fill_value propery and is Array.data_type dependent"
+            }
+          },
+          "required": ["missing_value"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["version", "schema", "name", "description", "spec", "configuration"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["78691ef5-ff17-4c55-98ca-a57f0e9d50bd"],
+  "additionalProperties": true
+}
